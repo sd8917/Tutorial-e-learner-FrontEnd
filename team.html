@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Register</title>
+  <title>Team.</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,9 +28,13 @@
         height:100%;
         align-items: center;
      }
-    
+  
+    #site-nav{
+        text-decoration: underline;
+        text-shadow: 1px 1px #FF0000;
+     }
     /*css for social link*/
-      .fa {
+    .fa {
       padding: 20px;
       font-size: 20px;
       width: 60px;
@@ -69,10 +73,65 @@
       background: #125688;
       color: white;
     }
-    #site-nav{
-        text-decoration: underline;
-        text-shadow: 1px 1px #FF0000;
-     }
+
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      width: 50%
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
 
   </style>
   
@@ -91,7 +150,7 @@
               
               <ul class="right hide-on-med-and-down">
                 <li><a href="index.html"><i class="material-icons">home HOME</i></a></li>
-                <li><a href="blog.html"><i class="material-icons">book BLOG</i></a></li>
+                <li><a href="badges.html"><i class="material-icons">book BLOG</i></a></li>
                 <li><a href="register.html"><i class="material-icons">person_outline REGISTER</i></a></li>
                 <li><a href="login.html"><i class="material-icons">lock_open LOGIN</i></a></li>
               </ul>
@@ -102,90 +161,60 @@
   <ul class="sidenav" id="mobile-demo">
     <img id="logo-container"  src="tutorial-logo.png">
     <li><a href="index.html"><i class="material-icons">home HOME</i></a></li>
-    <li><a href="blog.html"><i class="material-icons">book BLOG</i></a></a></li>
+    <li><a href="badges.html"><i class="material-icons">book BLOG</i></a></a></li>
     <li><a href="register.html"><i class="material-icons">person_outline REGISTER</i></a></li>
     <li><a href="login.html"><i class="material-icons">lock_open LOGIN</i></a></li>
   </ul>
 
   <br>
-  
-  <!-- lOGIN FORM GOES HERE -->
+  <!--  blog body goes here -->
 
-          <main>
-              
-            <center>
-             
-             <h5 id="site-nav" class="blue-text text-darken-2">Register Here..</h5>
+    <center><h2>Meet The Team</h2></center>
+    
 
-              <div class="container">
-                <div class="z-depth-1 lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 2px solid #00BFA5; min-width: 50%;">
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="redt-shirtfb.jpeg" alt="Jane" style="width:100%; height: 30%">
+          <div class="container">
+            <h2>Jane Doe</h2>
+            <p class="title">CEO & Founder</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
 
-                  <form class="col s12" method="post">
-                    <div class='row'>
-                      <div class='col s12'>
-                      </div>
-                    </div>
+      <div class="column">
+        <div class="card">
+          <img src="redt-shirtfb.jpeg" alt="Mike" style="width:100%">
+          <div class="container">
+            <h2>Mike Ross</h2>
+            <p class="title">Art Director</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <img src="redt-shirtfb.jpeg" alt="John" style="width:100%">
+          <div class="container">
+            <h2>John Doe</h2>
+            <p class="title">Designer</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>example@example.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                    <div class='row'>
-                      <div class='input-field col s12'>
-                        <i class="material-icons prefix">account_circle</i>
-                        <input class='validate' type='email' name='email' id='email' />
-                        <label for='email'>Username</label>
-                      </div>
-                    </div>
 
-                    <div class='row'>
-                      <div class='input-field col s12'>
-                        <i class="material-icons prefix">email</i>
-                        <input class='validate' type='email' name='email' id='email' />
-                        <label for='email'>Email</label>
-                      </div>
-                    </div>
-
-                    <div class='row'>
-                      <div class='input-field col s12'>
-                        <i class="material-icons prefix">lock </i>
-                        <input class='validate' type='password' name='password' id='password' />
-                        <label for='password'>Enter your password</label>
-                      </div>
-                      <label style='float: right;'>
-                        <a class='pink-text' href='#!'><b></b></a>
-                      </label>
-                    </div>
-
-                    <div class='row'>
-                      <div class='input-field col s12'>
-                        <i class="material-icons prefix">lock </i>
-                        <input class='validate' type='password' name='password' id='password' />
-                        <label for='password'>Confirm your password</label>
-                      </div>
-                      <label style='float: right;'>
-                        <a class='pink-text' href='#!'><b></b></a>
-                      </label>
-                    </div>
-
-                    <br />
-                    <center>
-                      <div class='row'>
-                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal accent-4'>Register</button>
-                      </div>
-                      <a href="#">Create account</a>
-                      
-                    </center>
-                    <br>
-                  </form>
-                </div>
-              </div>
-              
-
-            </center>
-
-          </main>
-  <br>
-  <br>
-   
-
-  <!--LOGIN FORM-->
+  <!-- blog body end -->
   
   <footer class="page-footer teal accent-4" >
     <div class="container">
